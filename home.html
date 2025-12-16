@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home — Project</title>
+    <meta name="description" content="Welcome to the project home page." />
+    <style>
+        :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa6b2;--accent:#3b82f6;--glass:rgba(255,255,255,0.03)}
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+            background:linear-gradient(180deg,#071029 0%,var(--bg) 100%);color:#e6eef6;
+            -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+            line-height:1.5;padding:32px;
+        }
+        .container{max-width:1100px;margin:0 auto;}
+        header{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:32px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;font-weight:700;color:#04263b;box-shadow:0 6px 18px rgba(11,20,30,0.5)}
+        nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+        nav a:hover{color:#fff}
+        .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;margin-bottom:28px}
+        .card{background:linear-gradient(180deg,var(--glass),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.04);padding:28px;border-radius:14px;backdrop-filter:blur(6px)}
+        h1{margin:0 0 12px;font-size:clamp(24px,4vw,40px);line-height:1.05}
+        p.lead{color:var(--muted);margin:0 0 18px}
+        .cta{display:inline-block;padding:10px 16px;background:var(--accent);color:#04263b;border-radius:10px;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(59,130,246,0.18)}
+        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:18px}
+        .feature{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+        .muted{color:var(--muted);font-size:0.95rem}
+        footer{margin-top:36px;color:var(--muted);font-size:0.9rem;text-align:center}
+        @media (max-width:820px){.hero{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">P</div>
+                <div>
+                    <div style="font-weight:800">Project</div>
+                    <div class="muted" style="font-size:0.85rem">Ship better, faster</div>
+                </div>
+            </div>
+            <nav aria-label="Main navigation">
+                <a href="#">Home</a>
+                <a href="#">Docs</a>
+                <a href="#">Examples</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="card">
+                    <h1>Build fast. Iterate faster.</h1>
+                    <p class="lead">A minimal starting template to prototype, test, and ship front-end features with confidence.</p>
+                    <a class="cta" href="#">Get started</a>
+                    <div class="features" style="margin-top:20px">
+                        <div class="feature">
+                            <strong>Accessible</strong>
+                            <div class="muted">Semantic markup and keyboard-friendly controls.</div>
+                        </div>
+                        <div class="feature">
+                            <strong>Responsive</strong>
+                            <div class="muted">Layouts adapt to any screen size.</div>
+                        </div>
+                        <div class="feature">
+                            <strong>Lightweight</strong>
+                            <div class="muted">Minimal CSS and no runtime dependencies.</div>
+                        </div>
+                        <div class="feature">
+                            <strong>Customizable</strong>
+                            <div class="muted">Tweak tokens and styles to match your brand.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="card" aria-labelledby="stats-heading">
+                    <h3 id="stats-heading" style="margin:0 0 12px">Quick stats</h3>
+                    <div style="display:flex;gap:12px;flex-wrap:wrap">
+                        <div style="flex:1;min-width:120px">
+                            <div style="font-size:1.6rem;font-weight:700">1.2k</div>
+                            <div class="muted">Stars</div>
+                        </div>
+                        <div style="flex:1;min-width:120px">
+                            <div style="font-size:1.6rem;font-weight:700">350</div>
+                            <div class="muted">Forks</div>
+                        </div>
+                        <div style="flex:1;min-width:120px">
+                            <div style="font-size:1.6rem;font-weight:700">24</div>
+                            <div class="muted">Releases</div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="card" aria-labelledby="about-heading" style="margin-bottom:18px">
+                <h2 id="about-heading" style="margin-top:0">About this starter</h2>
+                <p class="muted">This home page is a simple, accessible starting point for your web project. Replace sections, wire up routes, and adapt styles as needed.</p>
+            </section>
+        </main>
+
+        <footer>
+            © <span id="year"></span> Project — Built with clarity.
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
